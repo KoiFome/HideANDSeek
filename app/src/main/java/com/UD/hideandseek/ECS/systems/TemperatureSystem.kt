@@ -8,6 +8,7 @@ class TemperatureSystem : ECS.System {
 
     // Usamos explícitamente ECS.Entity para cumplir con el contrato de la interfaz
     override fun update(entities: List<ECS.Entity>, dt: Float) {
+
         // 1. Buscamos la entidad usando ECS.Entity
         val e = entities.firstOrNull { it.has<Components.TemperatureComponent>() } ?: return
 
