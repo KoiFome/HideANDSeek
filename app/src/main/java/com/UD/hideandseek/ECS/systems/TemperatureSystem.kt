@@ -3,6 +3,7 @@ package com.UD.hideandseek.ECS.systems
 import com.UD.hideandseek.ECS.Components
 import com.UD.hideandseek.ECS.ECS
 import com.UD.hideandseek.ECS.GameStatus
+import com.UD.hideandseek.ECS.TempState
 
 class TemperatureSystem : ECS.System {
 
