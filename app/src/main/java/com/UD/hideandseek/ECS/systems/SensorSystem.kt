@@ -44,5 +44,15 @@ class SensorSystem (context: Context) : ECS.System, SensorEventListener{
         }
     }
 
-class SensorSystem {
+    override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {}
+
+    override fun update(entities: List<ECS.Entity>, dt: Float) {
+        entities.forEach { e ->
+            e.get<Components.OrientationComponent>()?.apply {
+                azimuth = lastAzimuth
+                pitch = lastPitch
+                roll = lastRoll
+            }
+        }
+    }
 }
