@@ -1,6 +1,7 @@
 package com.UD.hideandseek.ECS.systems
 
 import android.content.Context
+import com.UD.hideandseek.ECS.ECS
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
