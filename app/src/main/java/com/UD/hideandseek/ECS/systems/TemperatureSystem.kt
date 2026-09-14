@@ -21,7 +21,7 @@ class TemperatureSystem : ECS.System {
         val diff = angularDistance(or.azimuth, tg.azimuth)
         tp.angularDistance = diff
         tp.state = when {
-            diff <= 15f -> TempState.CALIENTE
+            diff <= 15f -> TempState.FRIO
             diff <= 45f -> TempState.TIBIO
             else        -> TempState.FRIO
         }
