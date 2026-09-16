@@ -1,3 +1,59 @@
 <resources>
     <string name="app_name">HideANDSeek</string>
+    <string name="cd_back">Volver</string>
+    <string name="instruction_rotate">Gira y mueve tu teléfono para encontrar al personaje escondido.</string>
+    <string name="proximity_approaching">TE ESTÁS ACERCANDO</string>
+    <string name="hint_north">PISTA · Está hacia el norte</string>
+    <string name="label_approximate_distance">DISTANCIA APROXIMADA</string>
+    <string name="restart_game">REINICIAR PARTIDA</string>
+    <string name="temp_cold">Frío</string>
+    <string name="temp_mild">Tibio</string>
+    <string name="temp_hot">Caliente</string>
+    <string name="hint_shown">El objetivo está más cerca de lo que crees…</string>
+
+    <!---Results -->
+    <string name="result_found">¡Encontraste a Mokou!</string>
+    <string name="result_not_found">¡ESCAPO!</string>
+    <string name="result_total_time">Tiempo total</string>
+    <string name="result_score">Puntuación</string>
+    <string name="result_precision">Precisión</string>
+    <string name="result_best_time">Mejor tiempo personal</string>
+
+    <string name="result_new_record">¡Nuevo récord!</string>
+    <string name="result_score_value">%1$d pts</string>
+    <string name="result_precision_value">%1$d %%</string>
+    <string name="result_precision_none">—</string>
+
+    <string name="result_play_again">JUGAR DE NUEVO</string>
+    <string name="result_back_menu">VOLVER AL MENÚ</string>
+    <string name="result_share">COMPARTIR PUNTUACIÓN</string>
+
+    <string name="share_text">¡Encontré a Mokou en %2$s con %1$d puntos en Escondidas! ¿Puedes superarlo?</string>
+    <string name="share_chooser">Compartir puntuación</string>
+
+    <!-- DashboardActivity -->
+    <string name="dashboard_title">HIDE AND SEEK</string>
+    <string name="dashboard_subtitle">¡ENCUENTRALA!</string>
+
+    <string name="dashboard_welcome">¡Bienvenido al Bosque de bambu de los perdidos!</string>
+    <string name="dashboard_welcome_body">Encuentra a Fujiwara No Mokou antes de que se acabe el tiempo.</string>
+
+    <string name="dashboard_best_time">Mejor tiempo</string>
+    <string name="dashboard_best_score">Mejor puntuación</string>
+    <string name="dashboard_no_record">—</string>
+
+    <string name="dashboard_new_game">NUEVA PARTIDA</string>
+    <string name="dashboard_ranking">RANKING</string>
+    <string name="dashboard_settings">CONFIGURACIÓN</string>
+    <string name="dashboard_how_to_play">CÓMO JUGAR</string>
+
+    <string name="dashboard_how_to_play_body">
+        1. Pulsa NUEVA PARTIDA para empezar.\n\n2.
+        Gira y mueve el teléfono para orientarte.\n\n3.
+        La app te dirá si estás Frío, Tibio o Caliente según qué tan cerca estés de Mokou.
+        \n\n4. Cuando la flecha apunte a ella y estés muy cerca, aparecerá en pantalla.\n\n5.
+        ¡Encuéntrala antes de que se acabe el tiempo!</string>
+
+    <string name="dashboard_coming_soon">%1$s — próximamente</string>
+
 </resources>
