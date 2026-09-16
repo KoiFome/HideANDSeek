@@ -9,6 +9,12 @@ android {
         version = release(37)
     }
 
+
+    buildFeatures{
+        viewBinding = true
+    }
+
+
     defaultConfig {
         applicationId = "com.UD.hideandseek"
         minSdk = 24
@@ -38,10 +44,13 @@ android {
 dependencies {
 
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
-
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
 
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.activity.ktx)
+    implementation(libs.androidx.appcompat)
     implementation(libs.androidx.compose.material3)
     implementation("androidx.constraintlayout:constraintlayout:2.2.0")
     implementation(libs.androidx.compose.ui)
@@ -49,6 +58,7 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
