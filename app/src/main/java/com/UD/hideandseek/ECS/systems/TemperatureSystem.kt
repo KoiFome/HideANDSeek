@@ -13,22 +13,22 @@ class TemperatureSystem : ECS.System {
         // 1. Buscamos la entidad usando ECS.Entity
         val e = entities.firstOrNull { it.has<Components.TemperatureComponent>() } ?: return
 
-        val or = e.get<Components.OrientationComponent>() ?: return
-        val tg = e.get<Components.TargetComponent> () ?: return
-        val tp = e.get<Components.TemperatureComponent>() !!
+        val origin = e.get<Components.OrientationComponent>() ?: return
+        val target = e.get<Components.TargetComponent> () ?: return
+        val temp = e.get<Components.TemperatureComponent>() !!
         val gs = e.get<Components.GameStateComponent>()!!
 
         if (gs.status != GameStatus.PLAYING) return
 
-        val diff = angularDistance(or.azimuth, tg.azimuth)
-        tp.angularDistance = diff
-        tp.state = when {
-            diff <= 15f -> TempState.FRIO
+        val diff = angularDistance(origin.azimuth, target.azimuth)
+        temp.angularDistance = diff
+        temp.state = when {
+            diff <= target.toleranceDeg -> TempState.CALIENTE
             diff <= 45f -> TempState.TIBIO
             else        -> TempState.FRIO
         }
 
-        if (diff <= tg.toleranceDeg) {
+        if (temp.state == TempState.CALIENTE) {
             gs.status = GameStatus.WON
             gs.precisionAtFound = diff
         }
